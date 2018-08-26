@@ -63,7 +63,7 @@ def TextBoxesPlain(announce):
 			xbmc.sleep(500) # give window time to initialize
 			self.setControls()
 		def setControls(self):
-			self.win.getControl(self.CONTROL_LABEL).setLabel('[COLOR powderblue]ATW[/COLOR]') # set heading
+			self.win.getControl(self.CONTROL_LABEL).setLabel('[COLOR powderblue]DarkMedia[/COLOR]') # set heading
 			try: f=open(announce); text=f.read()
 			except: text=announce
 			self.win.getControl(self.CONTROL_TEXTBOX).setText(str(text))
@@ -83,7 +83,7 @@ def TextBoxes(announce):
 			xbmc.sleep(500) # give window time to initialize
 			self.setControls()
 		def setControls(self):
-			self.win.getControl(self.CONTROL_LABEL).setLabel('ATW Log Viewer') # set heading
+			self.win.getControl(self.CONTROL_LABEL).setLabel('DarkMedia Log Viewer') # set heading
 			try: f=open(announce); text=f.read()
 			except: text=announce
 			self.win.getControl(self.CONTROL_TEXTBOX).setText(str(text))

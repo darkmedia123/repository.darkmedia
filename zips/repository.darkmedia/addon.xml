@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.darkmedia" name="DarkMedia" version="1.0" provider-name="DarkMedia">
+<addon id="repository.darkmedia" name="DarkMedia Repo" version="1.1" provider-name="DarkMedia">
 	<extension point="xbmc.addon.repository" name="DarkMedia">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>

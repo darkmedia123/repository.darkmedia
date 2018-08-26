@@ -1,5 +1,5 @@
 import xbmc,xbmcplugin,xbmcgui,re,os,xbmcaddon,sys,base64,plugintools,time,urllib2,string,logging,array,shutil
-AddonID = 'plugin.video.atwstreams'
+AddonID = 'plugin.video.darkmedia'
 Username = plugintools.get_setting("Username")
 Password = plugintools.get_setting("Password")
 PVRon = plugintools.get_setting("PVRUpdater")

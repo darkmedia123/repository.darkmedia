@@ -519,9 +519,9 @@ def disablePVR():
 def SpeedChoice():
 	choice = dialog.select("[COLOR white]" + AddonTitle + " Speedtest[/COLOR]", ['[COLOR white]Ookla Speedtest[/COLOR]','[COLOR white]Fast.com Speedtest by Netflix[/COLOR]'])
 	if choice == 0:
-		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.atwstreams/speedtest.py")') ###############
+		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.darkmedia/speedtest.py")') ###############
 	if choice == 1:
-		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.atwstreams/fastload.py")')  ###############
+		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.darkmedia/fastload.py")')  ###############
 
 def iVueInt():
 
@@ -542,7 +542,7 @@ def iVueInt():
 	xbmc.executebuiltin("ActivateWindow(busydialog)")
 	iVue_SETTINGS = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide','settings.xml'))
 	UseriVueSets = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide','oldsettings.xml'))
-	AddoniVueSet = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.atwstreams/resources','ivueset.xml')) ###############
+	AddoniVueSet = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.darkmedia/resources','ivueset.xml')) ###############
 	iVue_DATA = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/'))
 	if not xbmc.getCondVisibility('System.HasAddon(script.ivueguide)'):
 		install('iVue','https://raw.githubusercontent.com/totaltec2014/ivue2/master/script.ivueguide/script.ivueguide-3.0.9.zip')
@@ -569,7 +569,7 @@ def iVueInt():
 	dp.create(AddonTitle,"Copying DB",'', 'Please Wait')
 	unzip(FullDB,iVue_DATA,dp)
 	xbmc.log("Full iVue Master DB Copied")
-	xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.atwstreams/fullivue.py")') ###############
+	xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.darkmedia/fullivue.py")') ###############
 
 def install(name,url):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
