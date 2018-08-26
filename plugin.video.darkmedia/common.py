@@ -1,7 +1,7 @@
 #         Thanks to PlayList Loader for this great code work, Its added an extra element to our addon      #
 import urllib, urllib2, os, io, xbmc, xbmcaddon, xbmcgui, json, re, time,xbmcplugin,sys,datetime,string,StringIO,logging,random,array,htmllib,xbmcvfs
 
-AddonID = 'plugin.video.atwstreams'
+AddonID = 'plugin.video.darkmedia'
 Addon = xbmcaddon.Addon(AddonID)
 icon = Addon.getAddonInfo('icon')
 AddonName = Addon.getAddonInfo("name")
