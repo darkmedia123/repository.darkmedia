@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.darkmedia" version="1.0" name="DarkMedia" provider-name="DarkMedia">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>DarkMedia</summary>
+        <description>DarkMedia</description>
+        <disclaimer>The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.darkmedia" name="DarkMedia" version="1.0" provider-name="DarkMedia">
+	<extension point="xbmc.addon.repository" name="DarkMedia">
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://raw.githubusercontent.com/darkmedia123/repository.darkmedia/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/darkmedia123/repository.darkmedia/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/darkmedia123/repository.darkmedia/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">DarkMedia Repo</summary>
+		<description lang="en">DarkMedia Repo</description>
+		<genre></genre>
+	</extension>
+</addon>
+</addons>
