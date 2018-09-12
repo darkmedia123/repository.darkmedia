@@ -83,8 +83,8 @@ def peamenyy(params):
         
         plugintools.add_item( action=vod_channels("c2VjdXJpdHlfY2hlY2s="),  title=vod_channels(supplier)+ " Live" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("bGl2ZXR2LnBuZw==")) , fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
         plugintools.add_item( action=vod_channels("ZGV0ZWN0X21vZGlmaWNhdGlvbg=="),   title="On Demand" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
-        plugintools.add_item( action=vod_channels("Ym9udXM="),   title="Bonus Content" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
-        plugintools.add_item( action=vod_channels("TGlzdGluZ3M="),   title="Listings" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
+        #plugintools.add_item( action=vod_channels("Ym9udXM="),   title="Bonus Content" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
+        #plugintools.add_item( action=vod_channels("TGlzdGluZ3M="),   title="Listings" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
         plugintools.add_item( action=vod_channels("bWFpbnRNZW51"),   title="Maintenance Tools" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
         plugintools.add_item( action=vod_channels("VG9vbHM="),   title="Tools & Settings" , thumbnail=os.path.join(LOAD_LIVE,vod_channels("dm9kLnBuZw==")), fanart=os.path.join(LOAD_LIVE,vod_channels("YmFja2dyb3VuZC5wbmc=")) ,  folder=True )
         
@@ -334,7 +334,7 @@ def stream_video(params):
         kanalinimi = kanalinimi.partition("[")
         striimilink = channel.find(get_live("c3RyZWFtX3VybA==")).text #stream_url
         pony = striimilink
-        if ("%s:%s/enigma2.php")%(lehekylg)  in striimilink: 
+        if ("%s/enigma2.php")%(lehekylg)  in striimilink: 
             pony = striimilink.split(kasutajanimi,1)[1]
             pony = pony.split(salasona,1)[1]
             pony = pony.split("/",1)[1]            
