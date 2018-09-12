@@ -21,7 +21,7 @@ def Check():
 		time.sleep(1)
 		f = open(NewPVR, 'a')
 		f.write('#EXTM3U\n')
-		UserList = base64.b64decode("JXM6JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
+		UserList = base64.b64decode("JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
 		link = open_url(UserList).replace('\r','').replace(',',' Channel="').replace('\nhttp','", Link=http')
 		match = re.compile('#EXTINF:-1 tvg-id="(.+?)" tvg-name="(.+?)" tvg-logo="(.+?)" group-title="(.+?)" Channel="(.+?)", Link=(.+?).ts').findall(link)
 		for EPGid, ChannelName, ChanLogo, GroupTitle, StreamTitle, StreamLink in match:

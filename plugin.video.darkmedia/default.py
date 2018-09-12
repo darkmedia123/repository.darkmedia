@@ -60,9 +60,9 @@ def run():
     pnimi = get_live("T25lIFZpZXcg")
     LOAD_LIVE = os.path.join( plugintools.get_runtime_path() , "resources" , "art" )
     plugintools.log(pnimi+get_live("U3RhcnRpbmcgdXA="))
-    televisioonilink = get_live("JXM6JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9jYXRlZ29yaWVz")%(lehekylg,kasutajanimi,salasona)
-    filmilink = vod_channels("JXM6JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfdm9kX2NhdGVnb3JpZXM=")%(lehekylg,kasutajanimi,salasona)
-    andmelink = vod_channels("JXM6JXMvcGFuZWxfYXBpLnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcw==")%(lehekylg,kasutajanimi,salasona)
+    televisioonilink = get_live("JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9jYXRlZ29yaWVz")%(lehekylg,kasutajanimi,salasona)
+    filmilink = vod_channels("JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfdm9kX2NhdGVnb3JpZXM=")%(lehekylg,kasutajanimi,salasona)
+    andmelink = vod_channels("JXMvcGFuZWxfYXBpLnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcw==")%(lehekylg,kasutajanimi,salasona)
     params = plugintools.get_params()
 
     if params.get("action") is None:
@@ -103,7 +103,7 @@ def Listings(params):
 
 def TheDev(params):
 
-    loginurl   = base64.b64decode("JXM6JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,kasutajanimi,salasona)
+    loginurl   = base64.b64decode("JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,kasutajanimi,salasona)
     try:
         req = urllib2.Request(loginurl,headers={"Accept" : "application/xml","User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"})
         connection = urllib2.urlopen(req)
@@ -117,7 +117,7 @@ def TheDev(params):
         sys.exit(1)
         xbmc.executebuiltin("Dialog.Close(busydialog)")
 
-    tvaAPI = base64.b64decode("JXM6JXMvcGFuZWxfYXBpLnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcw==")%(lehekylg,kasutajanimi,salasona)
+    tvaAPI = base64.b64decode("JXMvcGFuZWxfYXBpLnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcw==")%(lehekylg,kasutajanimi,salasona)
     link=open_url(tvaAPI)
     archivecheck = re.compile('"num":.+?,"name":"(.+?)".+?"stream_id":"(.+?)","stream_icon":"(.+?)".+?"tv_archive":(.+?).+?"tv_archive_duration":(.+?)}').findall(link)
     for kanalinimi,streamid,streamicon,tvarchive,archdays in archivecheck:
@@ -146,7 +146,7 @@ def tvarchive(extra):
     date3 = datetime.datetime.now() - datetime.timedelta(days)
     date = str(date3)
     date = str(date).replace('-','').replace(':','').replace(' ','')
-    APIv2 = base64.b64decode("JXM6JXMvcGxheWVyX2FwaS5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmYWN0aW9uPWdldF9zaW1wbGVfZGF0YV90YWJsZSZzdHJlYW1faWQ9JXM=")%(lehekylg,kasutajanimi,salasona,streamid)
+    APIv2 = base64.b64decode("JXMvcGxheWVyX2FwaS5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmYWN0aW9uPWdldF9zaW1wbGVfZGF0YV90YWJsZSZzdHJlYW1faWQ9JXM=")%(lehekylg,kasutajanimi,salasona,streamid)
     link=open_url(APIv2)
     match = re.compile('"title":"(.+?)".+?"start":"(.+?)","end":"(.+?)","description":"(.+?)"').findall(link)
     for ShowTitle,start,end,DesC in match:
@@ -173,7 +173,7 @@ def tvarchive(extra):
         Finalstart = Editstart.replace('-:','-')
         if Realstart > date:
             if Realstart < now:
-                catchupURL = base64.b64decode("JXM6JXMvc3RyZWFtaW5nL3RpbWVzaGlmdC5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmc3RyZWFtPSVzJnN0YXJ0PQ==")%(lehekylg,kasutajanimi,salasona,streamid)
+                catchupURL = base64.b64decode("JXMvc3RyZWFtaW5nL3RpbWVzaGlmdC5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmc3RyZWFtPSVzJnN0YXJ0PQ==")%(lehekylg,kasutajanimi,salasona,streamid)
                 ResultURL = catchupURL + str(Finalstart) + "&duration=%s"%(FinalDuration)
                 kanalinimi = str(start2)+ " - " + ShowTitle
                 plugintools.add_item( action=sync_data("cnVuX2Nyb25qb2I="), title=kanalinimi , url=ResultURL, thumbnail=streamicon , plot=DesC, fanart=os.path.join(LOAD_LIVE,sync_data("aG9tZXRoZWF0ZXIuanBn")) , extra="", isPlayable=True, folder=False )
@@ -262,7 +262,7 @@ def license_check(params):
     plugintools.log(pnimi+get_live("U2V0dGluZ3MgbWVudQ==")+repr(params))
     plugintools.open_settings_dialog()
 def license_check2(params):
-	loginurl   = base64.b64decode("JXM6JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,kasutajanimi,salasona)
+	loginurl   = base64.b64decode("JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,kasutajanimi,salasona)
 	try:
 		connection = urllib2.urlopen(loginurl)
 		print connection.getcode()
@@ -323,7 +323,7 @@ def stream_video(params):
     kasutajanimi=plugintools.get_setting("Username")
     salasona=plugintools.get_setting("Password")
     CatID = params.get(get_live("dXJs")) #description
-    url = get_live("JXM6JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0lcw==")%(lehekylg,kasutajanimi,salasona,CatID)
+    url = get_live("JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0lcw==")%(lehekylg,kasutajanimi,salasona,CatID)
     request = urllib2.Request(url, headers={"Accept" : "application/xml","User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"})
     u = urllib2.urlopen(request)
     tree = ElementTree.parse(u)
@@ -403,7 +403,7 @@ def open_url(url):
     except:quit()
 
 def VODsearch(params):
-	SEARCH_LIST = base64.b64decode(b'JXM6JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfdm9kX3N0cmVhbXMmY2F0X2lkPTA=')%(lehekylg,kasutajanimi,salasona)
+	SEARCH_LIST = base64.b64decode(b'JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfdm9kX3N0cmVhbXMmY2F0X2lkPTA=')%(lehekylg,kasutajanimi,salasona)
 	keyb = xbmc.Keyboard('', '[COLOR white]Search[/COLOR]')
 	keyb.doModal()
 	if (keyb.isConfirmed()):
@@ -426,7 +426,7 @@ def VODsearch(params):
 				plugintools.add_item( action="restart_service", title=pealkiri , url=striimilink, thumbnail=os.path.join("dm9kLnBuZw=="), plot=kirjeldus, fanart=os.path.join(LOAD_LIVE,sync_data("dGhlYXRlci5qcGc=")) , extra="", isPlayable=True, folder=False )
 
 def TVsearch(params):
-	SEARCH_LIST = base64.b64decode(b'JXM6JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0w')%(lehekylg,kasutajanimi,salasona)
+	SEARCH_LIST = base64.b64decode(b'JXMvZW5pZ21hMi5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0w')%(lehekylg,kasutajanimi,salasona)
 	keyb = xbmc.Keyboard('', '[COLOR white]Search[/COLOR]')
 	keyb.doModal()
 	if (keyb.isConfirmed()):

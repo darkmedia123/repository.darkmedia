@@ -28,7 +28,7 @@ lehekylg= base64.b64decode("aHR0cDovL3dhdGNoLmdvdGRhcmsuY29t")
 # pordinumber=base64.b64decode("Njk2OQ==")
 BASEURL = base64.b64decode("bmFkYQ==")
 AddonRes = xbmc.translatePath(os.path.join('special://home','addons',AddonID,'resources'))
-loginurl   = base64.b64decode("JXM6JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
+loginurl   = base64.b64decode("JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
 
 try:
     from sqlite3 import dbapi2 as database
@@ -422,14 +422,14 @@ def PVRbeta():
 	if not os.path.exists(PVRSimple):
 		os.makedirs(PVRSimple)
 	shutil.copyfile(AddonRes+'/PVRset.xml', PVRSimple+'settings.xml')
-	BetaPVR = PVRSimple+'VStreams.m3u8'
+	BetaPVR = PVRSimple+'darkmedia.m3u8'
 	time.sleep(1)
 
 	f = open(BetaPVR, 'a')
 	f.write('#EXTM3U\n')
 
 	xbmc.executebuiltin("ActivateWindow(busydialog)")
-	UserList = base64.b64decode("JXM6JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
+	UserList = base64.b64decode("JXMvZ2V0LnBocD91c2VybmFtZT0lcyZwYXNzd29yZD0lcyZ0eXBlPW0zdV9wbHVzJm91dHB1dD10cw==")%(lehekylg,Username,Password)
 	link = open_url(UserList).replace('\r','').replace(',',' Channel="').replace('\nhttp','", Link=http')
 	match = re.compile('#EXTINF:-1 tvg-id="(.+?)" tvg-name="(.+?)" tvg-logo="(.+?)" group-title="(.+?)" Channel="(.+?)", Link=(.+?).ts').findall(link)
 	for EPGid, ChannelName, ChanLogo, GroupTitle, StreamTitle, StreamLink in match:
