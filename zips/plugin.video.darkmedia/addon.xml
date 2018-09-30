@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.darkmedia" version="2.1" name="DarkMedia" provider-name="DarkMedia">
+<addon id="plugin.video.darkmedia" version="2.2" name="DarkMedia" provider-name="DarkMedia">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>        
+        <import addon="xbmc.python" version="2.1.0"/>  
+        <import addon="plugin.video.intervue"/>
+        <import addon="script.ivueguide"/>   
+        <import addon="xbmc.repo.ivueguide"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>

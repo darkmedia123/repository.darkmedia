@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.darkmedia" version="2.1" name="DarkMedia" provider-name="DarkMedia">
+<addon id="plugin.video.darkmedia" version="2.2" name="DarkMedia" provider-name="DarkMedia">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="plugin.video.intervue"/>
+        <import addon="script.ivueguide"/>
+        <import addon="xbmc.repo.ivueguide"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -16,6 +19,19 @@
         <language>en</language>
         <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="plugin.video.intervue" name="InterVUE" version="1.0.4" provider-name="[B]subTeam[/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="repository.darkmedia" name="DarkMedia Repo" version="1.1" provider-name="DarkMedia">
@@ -33,6 +49,34 @@
 		<summary lang="en">DarkMedia Repo</summary>
 		<description lang="en">DarkMedia Repo</description>
 		<genre></genre>
+	</extension>
+</addon>
+
+<addon id="script.ivueguide" name="Ivue TV Guide" version="4.1.8" provider-name="iVue Tv Guide">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py"/>
+    <extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+	<provides>video</provides>
+		<description lang="en">Final Release of Ivue Guide, simple free and effective, We hope you like it now with category intergration #teamiVue, Huge thanks to all coders out there for getting involved.</description>
+		<disclaimer lang="en">Final Release of Ivue Guide and is forked and based on FTV Guide, Dixie , Ivue ,Primeval, tommy winthers original code, </disclaimer>
+	</extension>
+</addon>
+
+<addon id="xbmc.repo.ivueguide" name="iVue2 TV Guide Repo" version="0.0.1" provider-name="iVue">
+	<extension point="xbmc.addon.repository" name="iVue2 TV Guide Add-ons Repository">
+		<info compressed="false">https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/totaltec2014/ivue2/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install iVue2 TV Guide </summary>
+		<description>Download and install for iVue2 Tv guide addons </description>
+		<disclaimer> Repo for iVue2 Tv guide addon </disclaimer>
+		<platform>all</platform>
 	</extension>
 </addon>
 </addons>
