@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.darkmedia" name="DarkMedia Repo" version="1.2" provider-name="DarkMedia">
-	<requires>
-        <import addon="plugin.video.intervue"/>
-        <import addon="script.ivueguide"/>   
-        <import addon="xbmc.repo.ivueguide"/>
-    </requires>
+<addon id="repository.darkmedia" name="DarkMedia Repo" version="1.3" provider-name="DarkMedia">
 	<extension point="xbmc.addon.repository" name="DarkMedia">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
