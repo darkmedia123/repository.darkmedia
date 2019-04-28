@@ -31,6 +31,25 @@
   </extension>
 </addon>
 
+<addon
+  id="pvr.DarkMedia"
+  version="1.0"
+  name="DarkMedia PVR"
+  provider-name="DarkMedia">
+  <requires>
+<import addon="kodi.binary.global.main" version="1.0.13"/>
+<import addon="kodi.binary.instance.pvr" version="5.10.3"/></requires>
+  <extension
+    point="xbmc.pvrclient"
+    library_windows="pvr.iptvsimple.dll"/>
+  <extension point="xbmc.addon.metadata">
+
+    <summary lang="en_AU">DarkMedia PVR</summary>
+    <summary lang="en_GB">DarkMedia PVR</summary>
+    <platform>windows-x86_64</platform>
+  </extension>
+</addon>
+
 <addon id="repository.darkmedia" name="DarkMedia Repo" version="1.3" provider-name="DarkMedia">
 	<extension point="xbmc.addon.repository" name="DarkMedia">
 		<dir>
