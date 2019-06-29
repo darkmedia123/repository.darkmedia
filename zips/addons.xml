@@ -33,7 +33,7 @@
 
 <addon
   id="pvr.DarkMedia"
-  version="1.0"
+  version="1.1"
   name="DarkMedia PVR"
   provider-name="DarkMedia">
   <requires>
