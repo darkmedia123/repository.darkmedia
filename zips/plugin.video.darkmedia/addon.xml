@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.darkmedia" version="3.0" name="DarkMedia" provider-name="DarkMedia">
+<addon id="plugin.video.darkmedia" version="3.5" name="DarkMedia" provider-name="DarkMedia">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>        
     </requires>
