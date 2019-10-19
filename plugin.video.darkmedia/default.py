@@ -28,7 +28,7 @@ supplier = "RGFya01lZGlh"
 HOME =  xbmc.translatePath('special://home/')
 GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.darkmedia', 'g')) 
 Guide = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.darkmedia', 'guide.xml')) 
-lehekylg= base64.b64decode("aHR0cDovL3dhdGNoLmdvdGRhcmsuY29t") 
+lehekylg= base64.b64decode("aHR0cDovL2dvdGRhcmsuY29t") 
 # pordinumber=base64.b64decode("Njk2OQ==")
 message = "VU5BVVRIT1JJWkVEIEVESVQgT0YgQURET04h"
 kasutajanimi=plugintools.get_setting("Username")
